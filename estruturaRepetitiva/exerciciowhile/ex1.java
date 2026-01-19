@@ -1,3 +1,4 @@
+package exerciciowhile;
 public class ex1 {
     public static void main(String[] args) {
         int senha = 0;
