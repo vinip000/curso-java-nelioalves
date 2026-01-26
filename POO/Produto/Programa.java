@@ -6,14 +6,22 @@ public class Programa {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        produto prod = new produto();
         System.out.println("Entre com os dados do produto: ");
         System.out.print("Nome: ");
-        prod.nome = sc.nextLine();
+        String nome = sc.nextLine();
         System.out.print("Preço: ");
-        prod.preco = sc.nextDouble();
+        double preco = sc.nextDouble();
         System.out.print("Quantidade no estoque: ");
-        prod.quantidade = sc.nextInt();
+        int quantidade = sc.nextInt();
+
+        produto prod = new produto(nome, preco, quantidade);
+
+        prod.setNome("Computador");
+        prod.setPreco(1200.00);
+        prod.setQuantidade(10); 
+        System.out.println("Nome atualizado: " + prod.getNome());
+        System.out.println("Preço atualizado: " + prod.getPreco());
+        System.out.println("Quantidade atualizada: " + prod.getQuantidade());
 
         System.out.println();
         System.out.println("Dados do produto" + prod);
