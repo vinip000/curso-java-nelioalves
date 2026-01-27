@@ -19,6 +19,15 @@ public class vetor1 {
             System.out.printf("%.2f%n", vect[i]);
         }
 
+        double sum = 0.0;
+        for (int i=0; i<n; i++) {
+            sum += vect[i];
+        }
+
+        double avg = sum / n;
+        System.out.printf("SOMA: %.2f%n", sum);
+        System.out.printf("MEDIA: %.2f%n", avg);
+        
 
         sc.close();
 
